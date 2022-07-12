@@ -28,6 +28,7 @@ public class Object2Main3 {
 		member.age = 30;
 		member.mail = "iu@naver.com";
 		mt3.info2(member);
+		System.out.println(member.age);
 			
 	}
 
