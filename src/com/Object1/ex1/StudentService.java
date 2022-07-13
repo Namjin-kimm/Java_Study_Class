@@ -45,15 +45,11 @@ public class StudentService {
 		Scanner sc = new Scanner(System.in);
 		int num = sc.nextInt();
 		Student std = new Student();
-		boolean flag = true;
+		std = null;
 		for(int i = 0; i < stds.length; i++) {
 			if(num == stds[i].backNum) {
 				std = stds[i];
-				flag = !flag;
 			}
-		}
-		if(flag) {
-			std = null;
 		}
 		return std;
 	}

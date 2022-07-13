@@ -28,7 +28,7 @@ public class StudentController {
 					if(select == 1) {
 						stds = ss.makeStudents();
 						}else if(select == 2){
-							sv.viewAll(stds);
+							sv.view(stds);
 							//System.out.println("문자를 입력하세요");
 							//String a = sc.next();
 							//sv.viewMessage(a);
@@ -38,10 +38,10 @@ public class StudentController {
 							//sc2.studentSearch(stds);
 							std = ss.findStudent(stds);
 							if(std != null) {
-							sv.viewOne(std);
+							sv.view(std);
 							} else {
 								String a = "없는 정보입니다";
-								sv.viewMessage(a);
+								sv.view(a);
 							}
 						}else if(select == 4){
 						System.out.println("4번");

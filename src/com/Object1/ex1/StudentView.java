@@ -7,14 +7,14 @@ public class StudentView {
 	//viewMessage
 	//문자열을 받아서 그 문자열을 출력
 	
-	public void viewMessage(String a) {
+	public void view(String a) {
 		System.out.println(a);
 	}
 	
 	//viewOne
 	//학생 한 명의 정보를 받아서 모든 정보를 출력
 	
-	public void viewOne(Student std) {
+	public void view(Student std) {
 		System.out.println("이름 : " + std.name);
 		System.out.println("번호 : " + std.backNum);
 		System.out.println("국어 점수 : " + std.kors);
@@ -27,7 +27,7 @@ public class StudentView {
 	//viewAll
 	//학생들의 정보를 받아서 출력
 	
-	public void viewAll(Student [] stds) {
+	public void view(Student [] stds) {
 		for(int i = 0; i < stds.length; i++) {
 			System.out.println("이름 : " + stds[i].name);
 			System.out.println("번호 : " + stds[i].backNum);
