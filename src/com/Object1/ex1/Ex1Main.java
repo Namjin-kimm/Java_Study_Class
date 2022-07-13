@@ -21,16 +21,19 @@ public class Ex1Main {
 		//Student student1 = new Student();
 		//Student student2 = new Student();
 		
-		Student student = null;
+		
+		Student student;
 		Scanner sc = new Scanner(System.in);
 		Student [] students = new Student[3];
-		for(int i = 0; i < 3; i++) {
+		int i = 0;
+		for(i = 0; i < 3; i++) {
 			student = new Student();
 			System.out.println("이름 입력");
 			student.name = sc.next();
 			students[i] = student;
+			System.out.println(i);
 		}
-		
+		System.out.println(i);
 		System.out.println(students[0].name);
 		System.out.println(students[1].name);
 		System.out.println(students[2].name);

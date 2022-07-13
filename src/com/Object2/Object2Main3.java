@@ -23,7 +23,10 @@ public class Object2Main3 {
 		String mail = sc.next();
 		mt3.info(name, age, mail);
 		
+		
 		Member member = new Member();
+		//member에는 name, age, mail과 같은 실제 데이터가 담기는 것이 아니라
+		//그 데이터들의 주소가 담긴다. 그러므로 name은 4byte
 		member.name = "iu";
 		member.age = 30;
 		member.mail = "iu@naver.com";

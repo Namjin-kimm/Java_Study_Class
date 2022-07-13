@@ -24,7 +24,7 @@ public class Method3 {
 		System.out.println(member.name);
 		System.out.println(member.age);
 		System.out.println(member.mail);
-		member.age = 30;
+		member.age = 100;
 	}
 
 }
