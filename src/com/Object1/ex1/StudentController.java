@@ -3,16 +3,24 @@ package com.Object1.ex1;
 import java.util.Scanner;
 
 public class StudentController {
+	//StudentController의 start라는 메서드 호출
+	Scanner sc;
+	StudentController sc1;
+	StudentService ss;
+	StudentView sv;
+	//StudentSearch sc2 = new StudentSearch();
+	Student [] stds;
+	Student std;
 	//start 메서드 선언
+	
+	public StudentController() {
+		sc = new Scanner(System.in);
+		sv = new StudentView();
+		ss = new StudentService();
+	}
 	public void start() {
 		
-		//StudentController의 start라는 메서드 호출
-				StudentController sc1 = new StudentController();
-				StudentService ss = new StudentService();
-				StudentView sv = new StudentView();
-				//StudentSearch sc2 = new StudentSearch();
-				Student [] stds = null;
-				Student std = new Student();
+		
 				
 				boolean check = true;
 				while(check) {
@@ -46,7 +54,8 @@ public class StudentController {
 						}else if(select == 4){
 						System.out.println("4번");
 						}else if(select == 5){
-						System.out.println("5번");
+						stds = ss.addStudent(stds);
+						
 						}else{
 						System.out.println("6번");
 						check = !check;

@@ -8,6 +8,7 @@ public class StudentMain {
 		System.out.println("프로그램 시작");
 		
 		StudentController sc = new StudentController();
+		//여기서 StudentController();는 메서드이다.
 		sc.start();
 			
 		System.out.println("프로그램 종료");
