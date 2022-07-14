@@ -10,11 +10,11 @@ public class StudentSearch {
 		int num = sc.nextInt();
 		boolean flag = true;
 		for(int i=0;i<stds.length;i++) {
-			if(num == stds[i].backNum) {
+			if(num == stds[i].getBackNum()) {
 				System.out.println("Name\tNum\tKor\tEng\tMath\tTotal\tAvg");
-				System.out.println(stds[i].name+"\t"+stds[i].backNum
-				+"\t"+stds[i].kors+"\t"+stds[i].engs+"\t"+stds[i].maths+"\t"
-				+stds[i].sum+"\t"+stds[i].avg);
+				System.out.println(stds[i].getName()+"\t"+stds[i].getBackNum()
+				+"\t"+stds[i].getKors()+"\t"+stds[i].getEngs()+"\t"+stds[i].getMaths()+"\t"
+				+stds[i].getSum()+"\t"+stds[i].getAvg());
 				flag=!flag;
 				break;
 				}

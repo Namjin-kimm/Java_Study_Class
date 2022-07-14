@@ -29,14 +29,12 @@ public class Ex1Main {
 		for(i = 0; i < 3; i++) {
 			student = new Student();
 			System.out.println("이름 입력");
-			student.name = sc.next();
+			student.setName(sc.next());
 			students[i] = student;
-			System.out.println(i);
 		}
-		System.out.println(i);
-		System.out.println(students[0].name);
-		System.out.println(students[1].name);
-		System.out.println(students[2].name);
+		System.out.println(students[0].getName());
+		System.out.println(students[1].getName());
+		System.out.println(students[2].getName());
 		
 		System.out.println("프로그램 종료");
 	}

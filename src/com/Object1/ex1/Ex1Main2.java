@@ -11,12 +11,12 @@ public class Ex1Main2 {
 		Student student = new Student();
 		
 		for(int i = 0; i < students.length; i++) {
-			student.name = sc.next();
+			student.setName(sc.next());
 			students[i] = student;
 		}
 		
 		for(int i = 0; i < students.length; i++) {
-			System.out.println(students[i].name);
+			students[i].getName();
 		}
 		
 		

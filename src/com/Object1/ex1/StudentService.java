@@ -27,15 +27,15 @@ public class StudentService {
 			std = new Student();
 			stds[i] = std;
 			System.out.println("이름을 입력하세요");
-			stds[i].name = sc.next();
+			std.setName(sc.next());
 			System.out.println("번호를 입력하세요");
-			stds[i].backNum = sc.nextInt();
+			std.setBackNum(sc.nextInt());
 			System.out.println("국어 점수를 입력하세요");
-			stds[i].kors = sc.nextInt();
+			std.setKors(sc.nextInt());
 			System.out.println("영어 점수를 입력하세요");
-			stds[i].engs = sc.nextInt();
+			std.setEngs(sc.nextInt());
 			System.out.println("수학 점수를 입력하세요");
-			stds[i].maths = sc.nextInt();
+			std.setMaths(sc.nextInt());
 			stds[i].setTotal();
 			//stds[i].sum = stds[i].kors + stds[i].engs + stds[i].maths;
 			//stds[i].avg = stds[i].sum/3.0;
@@ -58,7 +58,7 @@ public class StudentService {
 		Student std = new Student();
 		std = null;
 		for(int i = 0; i < stds.length; i++) {
-			if(num == stds[i].backNum) {
+			if(num == stds[i].getBackNum()) {
 				std = stds[i];
 			}
 		}
@@ -80,19 +80,37 @@ public class StudentService {
 		stdsCopy[i] = std;
 		System.out.println("학생의 정보를 입력");
 		System.out.println("학생의 이름");
-		stdsCopy[i].name = sc.next();
+		std.setName(sc.next());
 		System.out.println("학생의 번호");
-		stdsCopy[i].backNum = sc.nextInt();
+		std.setBackNum(sc.nextInt());
 		System.out.println("학생의 국어 점수");
-		stdsCopy[i].kors = sc.nextInt();
+		std.setKors(sc.nextInt());
 		System.out.println("학생의 영어 점수");
-		stdsCopy[i].engs = sc.nextInt();
+		std.setEngs(sc.nextInt());
 		System.out.println("학생의 수학 점수");
-		stdsCopy[i].maths = sc.nextInt();
+		std.setMaths(sc.nextInt());
 		stdsCopy[i].setTotal();
 		
 		return stdsCopy;
 		
+	}
+	
+	//removeStudent
+	//학생들의 정보를 받아서
+	//삭제하려는 학생의 번호를 입력 받음
+	//학생의 번호와 일치하는 학생을 삭제
+	//남은 학생들의 정보를 리턴
+	
+	public void removeStudent(Student [] stds) {
+		System.out.println("정보를 삭제하려는 학생의 번호를 입력하세요");
+		int a =sc.nextInt();
+		Student [] stdsCopy = new Student[stds.length - 1];
+		for(int i = 0; i < stds.length; i++ ) {
+			if(a == stds[i].getBackNum()) {
+				continue;
+			}
+			stdsCopy[i] = stds[i];
+		}
 	}
 
 }
